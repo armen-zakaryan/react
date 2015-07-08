@@ -1,0 +1,20 @@
+{
+  "name": "bower",
+  "version": "0.0.0",
+  "authors": [
+    "Armen Zakaryan <azakaryan@macadamian.com>"
+  ],
+  "description": "playing with react",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.13.3",
+    "require": "*"
+  }
+}
