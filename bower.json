@@ -17,6 +17,7 @@
     "react": "~0.13.3",
     "requirejs": "~2.1.18",
     "require-jsx": "*",
-    "leaflet": "~0.7.3"
+    "leaflet": "~0.7.3",
+    "gulp": "~3.9.0"
   }
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-define(['react', 'config', 'jsx!react-components/TimerExample', 'jsx!react-components/map'], function(React, config, TimerExample, Map) {
+define(['react'], function(React) {
 /*
     React.render 	( < TimerExample start = {Date.now()}/>,
         document.getElementById('example')
