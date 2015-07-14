@@ -15,6 +15,8 @@
   ],
   "dependencies": {
     "react": "~0.13.3",
-    "require": "*"
+    "requirejs": "~2.1.18",
+    "require-jsx": "*",
+    "leaflet": "~0.7.3"
   }
 }
