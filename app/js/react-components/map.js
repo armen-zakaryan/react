@@ -16,15 +16,24 @@ define(['react', 'leaflet'], function(React) {
             return {};
         },
         componentDidMount: function() {
-            var map = L.map('map').setView([51.505, -0.09], 13);
+            
+           navigator.geolocation.getCurrentPosition(function(location) {
+                //debugger
+                var latitude = location.coords.latitude,
+                    longitude = location.coords.longitude;
 
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+                var map = L.map('map').setView([latitude, longitude], 13);
 
-            L.marker([51.5, -0.09]).addTo(map)
-                .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-                .openPopup();
+                L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+                    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                    maxZoom: 18,
+                    id: 'armen0089.b18dbdf4',
+                    accessToken: 'pk.eyJ1IjoiYXJtZW4wMDg5IiwiYSI6IjQ3NWNlOTYxZjZhY2E1MjYwYzJkNWZkZTk1YjNlYTRmIn0.ug3IyaiVWaRPXnREDOSnxA'
+                }).addTo(map);
+
+            })
+
+            
         },
         render: function() {
             return (<div className="map" id="map"> </div>)

@@ -18,6 +18,7 @@
     "requirejs": "~2.1.18",
     "require-jsx": "*",
     "leaflet": "~0.7.3",
-    "gulp": "~3.9.0"
+    "gulp": "~3.9.0",
+    "openlayers": "*"
   }
 }

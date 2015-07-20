@@ -2,12 +2,17 @@
 <html>
   <head>
     <title>Hello React!</title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <link rel="stylesheet" href="app/css/main.css" />
+    <!--script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script-->
   </head>
   <body>
 
- 	<div id="map"></div>
+   	<div class="map-container">
+      <div id="map"></div>
+    </div>
+    
     <script type="text/javascript">
       	/*
         var map = L.map('map').setView([51.505, -0.09], 13);
@@ -20,10 +25,6 @@
 
         */
     </script>
-
-    <style type="text/css">
-    	#map { height: 180px; }
-    </style>
  
     <script data-main="app/js/main" src="bower_components/requirejs/require.js"></script>
   </body>
